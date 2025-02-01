@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-primary: 'Inter', 'sans-serif';
+  --breakpoint-xl: 1200px;
+  --color-blue: #168acd;
+  --color-black: #161616;
+  --color-border: #a6a6a666;
+  --color-gray: #7a7a7a;
+  --text-sm: 0.75rem;
+  --text-6xl: 3rem;
+  --text-4xl: 2rem;
+}
+
+@layer theme {
+  body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-sm);
+    color: var(--color-black);
+  }
+}

@@ -1,1 +1,5 @@
-# test-awx
+## Getting Started
+
+```bash
+npm run dev  // dev mod
+```
