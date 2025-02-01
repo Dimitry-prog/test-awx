@@ -25,7 +25,7 @@ export const CurrencyInput = ({ type, className, currency, ...props }: CurrencyI
       const span = document.createElement('span');
       span.style.visibility = 'hidden';
       span.style.position = 'absolute';
-      span.style.fontSize = '2.25rem';
+      span.style.fontSize = '3rem';
       span.style.fontFamily = window.getComputedStyle(inputRef.current).fontFamily;
       span.innerText = value;
       document.body.appendChild(span);
@@ -38,7 +38,7 @@ export const CurrencyInput = ({ type, className, currency, ...props }: CurrencyI
   return (
     <div
       onClick={handleFocusInput}
-      className="border-border relative inline-flex w-full items-center border-b py-2"
+      className="border-border relative inline-flex w-full items-baseline border-b py-2"
     >
       <input
         ref={inputRef}
@@ -47,7 +47,7 @@ export const CurrencyInput = ({ type, className, currency, ...props }: CurrencyI
         value={value}
         onChange={handleChange}
         className={cn('w-full text-6xl focus:outline-none', className)}
-        style={{ width: `${inputWidth + 10}px` }}
+        style={{ maxWidth: `${inputWidth + 5}px` }}
         aria-label="Currency amount"
       />
       {currency && <span className="text-blue text-4xl whitespace-nowrap">{currency}</span>}
